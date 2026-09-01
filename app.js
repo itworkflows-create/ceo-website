@@ -165,7 +165,7 @@ function initBookingWidget() {
   const bookAnotherBtn = document.getElementById('book-another-btn');
 
   let selectedDate = 'Wed, Sep 2';
-  let selectedTime = '09:30 AM';
+  let selectedTime = '10:00 AM';
 
   // Date selection
   datePills.forEach(pill => {
@@ -202,7 +202,7 @@ function initBookingWidget() {
 
       const submitBtn = document.getElementById('submit-booking-btn');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<span>Reserving Discovery Slot...</span>';
+      submitBtn.innerHTML = '<span>Reserving Consultation Slot...</span>';
       submitBtn.disabled = true;
 
       setTimeout(() => {
