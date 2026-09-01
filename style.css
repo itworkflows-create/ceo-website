@@ -1,6 +1,6 @@
 /* ==========================================================================
    MALINDA - EXECUTIVE CEO & FOUNDER ADVISORY WEBSITE
-   Design System & Styling (Clean Light / White & Black Executive Aesthetic)
+   Design System & Styling (Clean White & Black Executive Aesthetic)
    ========================================================================== */
 
 /* ---------------- CSS RESET & BOX SIZING ---------------- */
@@ -24,7 +24,7 @@ html {
   --bg-surface: #FAFAFB;
   --bg-surface-raised: #FFFFFF;
   --bg-surface-elevated: #F3F4F6;
-  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-glass: rgba(255, 255, 255, 0.94);
   --bg-dark-accent: #11141A;
   
   /* Signature Brand Accent */
@@ -35,7 +35,7 @@ html {
   --accent-border: rgba(254, 107, 0, 0.35);
 
   /* Typography Colors - Deep Black & Editorial Slates */
-  --text-white: #0A0C10; /* Used for headings */
+  --text-white: #0A0C10; /* Headings */
   --text-heading: #0A0C10;
   --text-primary: #1F242E;
   --text-secondary: #586274;
@@ -83,7 +83,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 a {
@@ -254,7 +254,7 @@ img {
 }
 
 .site-header.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .header-container {
@@ -764,7 +764,7 @@ img {
 
 .press-brand {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-heading);
@@ -783,9 +783,9 @@ img {
   100% { transform: translateX(-50%); }
 }
 
-/* ---------------- BENTO GRID SECTION ---------------- */
+/* ---------------- BENTO GRID SECTION (CLEAN & NON-OVERLAPPING) ---------------- */
 .bento-section {
-  padding: 110px 0;
+  padding: 100px 0;
   position: relative;
   background: #FFFFFF;
 }
@@ -793,8 +793,8 @@ img {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 240px;
   gap: 24px;
+  align-items: stretch;
 }
 
 .bento-card {
@@ -802,13 +802,12 @@ img {
   background: #FFFFFF;
   border: 1px solid var(--border-medium);
   border-radius: var(--border-radius-lg);
-  padding: 32px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
 }
 
 .bento-card:hover {
@@ -819,20 +818,21 @@ img {
 
 .bento-card-large {
   grid-column: span 2;
-  grid-row: span 2;
   padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.bento-media-box {
+.bento-card-large .bento-media-box {
   position: relative;
-  height: 55%;
+  height: 220px;
   width: 100%;
   overflow: hidden;
+  background: var(--bg-surface-elevated);
 }
 
-.bento-img {
+.bento-card-large .bento-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -846,39 +846,48 @@ img {
 .bento-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.95) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.bento-pill-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .bento-card-large .bento-content {
-  padding: 32px;
-  height: 45%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.bento-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent);
+  gap: 12px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .bento-icon-circle {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
   background: var(--accent-subtle);
   border: 1px solid var(--accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .bento-stat {
-  font-size: 1.85rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--text-heading);
   line-height: 1.15;
@@ -891,6 +900,7 @@ img {
   font-weight: 700;
   color: var(--text-heading);
   margin-bottom: 8px;
+  line-height: 1.35;
 }
 
 .bento-text {
@@ -902,8 +912,8 @@ img {
 .bento-meta-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .meta-pill {
@@ -923,7 +933,7 @@ img {
 
 /* ---------------- 3-PILLAR PROGRAM SECTION ---------------- */
 .program-section {
-  padding: 110px 0;
+  padding: 100px 0;
   background: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -1113,7 +1123,7 @@ img {
 
 /* ---------------- TESTIMONIALS SLIDER ---------------- */
 .testimonials-section {
-  padding: 110px 0;
+  padding: 100px 0;
   background: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -1259,7 +1269,7 @@ img {
 
 /* ---------------- BOOKING & PRICING SECTION ---------------- */
 .booking-section {
-  padding: 120px 0;
+  padding: 100px 0;
   position: relative;
   background: #FFFFFF;
 }
@@ -1830,17 +1840,14 @@ img {
 @media (max-width: 1024px) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
   }
   
   .bento-card-large {
     grid-column: span 2;
-    grid-row: auto;
-    height: auto;
   }
   
-  .bento-media-box {
-    height: 240px;
+  .bento-card-large .bento-media-box {
+    height: 200px;
   }
 
   .program-cards-grid {
@@ -1901,7 +1908,7 @@ img {
   }
 
   .badge-top-left {
-    display: none; /* Hide top badge on mobile to keep video clean */
+    display: none;
   }
 
   .bento-grid {
