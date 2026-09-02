@@ -273,8 +273,27 @@ img {
   gap: 10px;
 }
 
+.brand-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-medium);
+  margin: 0 2px;
+}
+
+.brand-text-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-heading);
@@ -289,9 +308,9 @@ img {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text-secondary);
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
   padding: 3px 8px;
   border-radius: var(--border-radius-pill);
 }
@@ -753,7 +772,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.85;
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -768,6 +787,13 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-heading);
+}
+
+.marquee-brand-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 4px;
 }
 
 .press-tag {
@@ -863,6 +889,15 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bento-pill-logo {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
 }
 
 .bento-card-large .bento-content {
@@ -1439,6 +1474,17 @@ img {
   color: var(--text-secondary);
 }
 
+.scheduler-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.scheduler-company-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
 .call-badge {
   font-size: 0.75rem;
   font-weight: 700;
@@ -1664,6 +1710,29 @@ img {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-name-badge {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-pill);
 }
 
 .footer-bio {
